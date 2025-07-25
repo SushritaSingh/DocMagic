@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DocMagic Hero</title>
+ <style>.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  background: linear-gradient(90deg, #f0f0f0 0%, #ffffff 100%);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.hero-badges a {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+}
+
+.hero-badges img {
+  height: 28px;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.hero-badges img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 6px rgba(0,0,0,0.2);
+}
+
+.hero-badges a::after {
+  content: attr(title);
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 4px 8px;
+  font-size: 12px;
+  white-space: nowrap;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.hero-badges a:hover::after {
+  opacity: 1;
+}</style>
+</head>
+<body>
+<div class="hero-badges">
+  <a href="https://github.com/Muneerali199/DocMagic/actions">
+    <img 
+      src="https://github.com/Muneerali199/DocMagic/actions/workflows/ci.yml/badge.svg" 
+      alt="Build Status" 
+      title="Build Status"
+    />
+  </a>
+  <a href="https://github.com/Muneerali199/DocMagic/blob/main/LICENSE">
+    <img 
+      src="https://img.shields.io/github/license/Muneerali199/DocMagic" 
+      alt="License" 
+      title="License"
+    />
+  </a>
+  <a href="https://libraries.io/github/Muneerali199/DocMagic">
+    <img 
+      src="https://img.shields.io/librariesio/github/Muneerali199/DocMagic" 
+      alt="Dependencies" 
+      title="Dependencies"
+    />
+  </a>
+</div>
+</body>
+</html>
